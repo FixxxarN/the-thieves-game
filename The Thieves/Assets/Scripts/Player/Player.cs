@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private float _baseSpeed;
     private float _baseJumpForce;
 
-    private float _health;
+    [SerializeField] private float _health;
     private float _damage;
     private float _speed;
     private float _jumpForce;
@@ -65,12 +65,12 @@ public class Player : MonoBehaviour
     public Player()
     {
         _baseHealth = 100f;
-        _baseDamage = 10f;
+        _baseDamage = 12f;
         _baseSpeed = 1f;
         _baseJumpForce = 3f;
 
         _health = 100f;
-        _damage = 10f;
+        _damage = 12f;
         _speed = 1f;
         _jumpForce = 3f;
     }
@@ -78,5 +78,10 @@ public class Player : MonoBehaviour
     public void SetSpeed(float speed)
     {
         _speed = speed;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        _health -= damage;
     }
 }
