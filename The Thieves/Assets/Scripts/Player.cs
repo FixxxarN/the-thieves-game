@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float _health;
-    [SerializeField] private float _damage;
-    [SerializeField] private float _speed;
+    private float _health;
+    private float _damage;
+    private float _speed;
+    private float _jumpForce;
 
     public float Health
     {
@@ -26,10 +27,17 @@ public class Player : MonoBehaviour
         get { return _speed; }
     }
 
+    public float JumpForce
+    {
+        private set { _jumpForce = value; }
+        get { return _jumpForce; }
+    }
+
     public Player()
     {
         _health = 100f;
         _damage = 10f;
         _speed = 1f;
+        _jumpForce = 3;
     }
 }
