@@ -24,7 +24,10 @@ public class PlayerRunningModule : MonoBehaviour
 
     void Update()
     {
-        Run();
+        if(_player.IsActive)
+        {
+            Run();
+        }
     }
 
     private void Run()

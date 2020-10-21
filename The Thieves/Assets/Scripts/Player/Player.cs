@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private float _damage;
     private float _speed;
     private float _jumpForce;
+    [SerializeField] private bool _isActive;
 
     public float BaseHealth
     {
@@ -62,6 +63,12 @@ public class Player : MonoBehaviour
         get { return _jumpForce; }
     }
 
+    public bool IsActive
+    {
+        private set { _isActive = value; }
+        get { return _isActive; }
+    }
+
     public Player()
     {
         _baseHealth = 100f;
@@ -69,10 +76,12 @@ public class Player : MonoBehaviour
         _baseSpeed = 1f;
         _baseJumpForce = 3f;
 
-        _health = 100f;
-        _damage = 12f;
-        _speed = 1f;
-        _jumpForce = 3f;
+        _health = _baseHealth;
+        _damage = _baseDamage;
+        _speed = _baseSpeed;
+        _jumpForce = _baseJumpForce;
+
+        _isActive = false;
     }
 
     public void SetSpeed(float speed)
@@ -83,5 +92,10 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _health -= damage;
+    }
+
+    public void SetIsActive(bool active)
+    {
+        _isActive = active;
     }
 }

@@ -23,10 +23,12 @@ public class PlayerJumpModule : MonoBehaviour
         CheckIfFrounded();
     }
 
-
     void Update()
     {
-        Jump();
+        if(_player.IsActive)
+        {
+            Jump();
+        }
     }
 
     private void CheckIfFrounded()

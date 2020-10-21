@@ -5,16 +5,21 @@ using UnityEngine;
 
 public class PlayerShootAndThrowModule : MonoBehaviour
 {
+    private Player _player;
     [SerializeField] private GameObject _itemToBeThrown;
 
     void Start()
     {
+        _player = GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Throw();
+        if(_player.IsActive)
+        {
+            Throw();
+        }
     }
 
     private void Throw()

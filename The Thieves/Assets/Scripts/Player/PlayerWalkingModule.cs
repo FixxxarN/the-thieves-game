@@ -17,7 +17,10 @@ public class PlayerWalkingModule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if(_player.IsActive)
+        {
+            Move();
+        }
     }
 
     private void Move()

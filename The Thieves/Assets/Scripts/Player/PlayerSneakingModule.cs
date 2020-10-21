@@ -25,7 +25,10 @@ public class PlayerSneakingModule : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Sneak();
+        if(_player.IsActive)
+        {
+            Sneak();
+        }
     }
 
     private void Sneak()

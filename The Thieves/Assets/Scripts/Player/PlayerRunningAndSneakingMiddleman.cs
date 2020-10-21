@@ -19,7 +19,10 @@ public class PlayerRunningAndSneakingMiddleman : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ResetPlayerBaseSpeed();
+        if(_player.IsActive)
+        {
+            ResetPlayerBaseSpeed();
+        }
     }
 
     private void ResetPlayerBaseSpeed()
