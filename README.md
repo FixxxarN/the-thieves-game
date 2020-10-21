@@ -1,1 +1,1 @@
-# the-thieves-game
+# The Thieves
