@@ -10,5 +10,11 @@ namespace Assets.Scripts.UI
     public class Item : MonoBehaviour
     {
         public Sprite Texture;
+        [SerializeField] private bool _shouldBeRotated;
+
+        public bool ShouldBeRotated
+        {
+            get { return _shouldBeRotated; }
+        }
     }
 }

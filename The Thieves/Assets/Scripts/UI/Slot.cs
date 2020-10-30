@@ -13,6 +13,11 @@ namespace Assets.Scripts.UI
         [SerializeField] private Item _item;
         private Image _itemImage;
 
+        public Item Item
+        {
+            get { return _item; }
+        }
+
         void Start()
         {
             _itemImage = transform.Find("Item").GetComponent<Image>();

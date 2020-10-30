@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Texture: {fileID: 21300000, guid: 2381d625a5882ed4d83a635746eacc07, type: 3}
+  _shouldBeRotated: 1
 --- !u!212 &2310958902152269222
 SpriteRenderer:
   m_ObjectHideFlags: 0

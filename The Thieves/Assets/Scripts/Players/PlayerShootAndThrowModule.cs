@@ -27,7 +27,7 @@ public class PlayerShootAndThrowModule : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.X))
         {
             Vector2 target = Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
-            Vector2 myPos = new Vector2(transform.position.x, transform.position.y + 0.3f);
+            Vector2 myPos = transform.Find("Arm").transform.Find("Item").transform.position;
             Vector2 direction = target - myPos;
             direction.Normalize();
             GameObject itemToBeThrown = (GameObject)Instantiate(_itemToBeThrown, myPos, Quaternion.identity);
