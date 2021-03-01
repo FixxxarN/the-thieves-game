@@ -16,7 +16,8 @@ public class PlayerStatsModule : MonoBehaviour
 
     void Update()
     {
-        UpdateHealth();
+        if(_player.IsActive)
+            UpdateHealth();
     }
 
     private void UpdateHealth()

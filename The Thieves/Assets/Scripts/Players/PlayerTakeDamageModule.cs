@@ -11,11 +11,11 @@ public class PlayerTakeDamageModule : MonoBehaviour
         _player = GetComponent<Player>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.tag == "Enemy")
+        if(other.gameObject.tag == "Enemy")
         {
-            _player.TakeDamage(other.GetComponent<Enemy>().Damage);
+            _player.TakeDamage(other.gameObject.GetComponent<Enemy>().Damage);
         }
     }
 }

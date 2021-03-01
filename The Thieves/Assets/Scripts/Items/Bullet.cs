@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            Instantiate(_bloodParticle, transform.position, Quaternion.identity);
+            Instantiate(_bloodParticle, transform.position + new Vector3(0f, 0f, 1f), Quaternion.identity);
             Destroy(gameObject);
         }
     }
